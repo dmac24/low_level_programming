@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - conditional value of 0
+ * main - Read the last digit
  *
  * Return: Always 0.
  */
