@@ -3,8 +3,6 @@
 /**
  * main - Prints a Sentence
  *
- * Description: Phrase
- *
  * Return: Always 0.
  */
 
