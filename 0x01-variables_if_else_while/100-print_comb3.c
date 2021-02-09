@@ -11,21 +11,23 @@
 int main(void)
 {
 int c = 48;
-int d = 48;
+int d = 49;
 
- while ((d < 58 ) && (c != d))
+while ((c <= 56) && (c != d))
 {
 putchar(c);
 putchar(d);
- c++;
- d++;
- putchar(44);
- putchar(32);
- if ((c == 57) && (d == 57))
-   {
+if ((c == 56) && (d == 57))
+{
 putchar('\n');
-   }
-  }
-
+c++;
+d++;
+}
+else
+{
+putchar(44);
+putchar(32);
+}
+}
 return (0);
 }
