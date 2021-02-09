@@ -14,11 +14,17 @@ int c = 48;
 while (c < 58)
 {
 putchar(c);
+if (c == 57)
+{
+putchar('\n');
+c++;
+}
+else
+{
 putchar(44);
 putchar(32);
 c++;
 }
-putchar('\n');
-
+}
 return (0);
 }
