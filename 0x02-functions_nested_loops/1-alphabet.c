@@ -1,11 +1,13 @@
 #include "holberton.h"
 
 /**
- * print alphabet - print alphabet
+ * print alphabet - alphabet
  *
+ * @alp - character
  *
- * Return: Always 0.
+ * Return: void
  */
+
 void print_alphabet(void)
 {
 int alp = 'a';
