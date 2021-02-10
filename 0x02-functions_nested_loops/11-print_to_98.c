@@ -1,20 +1,12 @@
-#include <stdio.h>
 /**
- * print_to_98 - prints n
+ * add - 2 numbers
  *
- * @n: number
+ * @a: add to b
+ * @b: add to a
  *
- * Return: void
+ * Return: the result
  */
-void print_to_98(int n)
+int add(int a, int b)
 {
-while (n >= 98 || n < 98)
-{
-printf("%d", n);
-if (n == 98)
-break;
-printf(", ");
-(n > 98) ? n-- : n++;
-}
-putchar('\n');
+return (a + b);
 }
