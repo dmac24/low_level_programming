@@ -3,7 +3,7 @@
  *
  * @c: character parameter to check
  *
- * Return: 1 and 0 
+ * Return: 1 and 0
  */
 int _isalpha(int c)
 {

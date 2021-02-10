@@ -17,7 +17,7 @@ n = 0;
 lt = 0;
 while (n < 10)
 {
-lt = n * i;
+lt = n *i;
 po = lt % 10;
 pt = (lt - po) / 10;
 if (pt == 0 && n > 0)
