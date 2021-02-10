@@ -12,11 +12,11 @@ int c = 'a';
 int n = '0';
 while (n < 10)
 {
-_putchar(10);
-}  
 while (c <= 'z')
 {
 _putchar(c++);
 }
-_putchar('\n');
+_putchar(10);
+n++;
+}
 }
