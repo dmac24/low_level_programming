@@ -3,17 +3,14 @@
 /**
  * print alphabet - alphabet
  *
- * @alp - character
- *
  * Return: void
  */
-
 void print_alphabet(void)
 {
-int alp = 'a';
-while (alp <= 'z')
+int c = 'a';
+while (c <= 'z')
 {
-_putchar(alp++);
+_putchar(c++);
 }
 _putchar('\n');
 }
