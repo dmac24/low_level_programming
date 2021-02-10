@@ -8,10 +8,10 @@
 
 void print_alphabet(void)
 {
-int c = 'a';
-while (c < 'z')
+int c = 97;
+while (c <= 122)
 {
 _putchar(c++);
 }
-
-return (0);
+_putchar('\n');
+}
