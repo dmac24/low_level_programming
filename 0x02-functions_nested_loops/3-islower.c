@@ -1,6 +1,8 @@
 #include "holberton.h"
 /**
- * _islower
+ * _islower - print return
+ *
+ * @c: variable
  *
  * Return: 1 and 0.
  */
