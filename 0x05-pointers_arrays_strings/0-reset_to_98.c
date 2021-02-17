@@ -1,18 +1,18 @@
 #include "holberton.h"
 
 /**
- * _isupper - checks for uppercase character
+ * reset_to_98 - reset value n
  *
- * @c: character.
+ * Description - Reset value n to 98
  *
- * Return: 1 if uppercase, 0 otherwise.
+ * @n: variable
+ *
+ * Return: Void.
  */
 
-int _isupper(int c)
+void reset_to_98(int *n)
 {
-if ((c >= 'A') && (c <= 'Z'))
-{
-return (1);
-}
-return (0);
+
+*n = 98;
+
 }
