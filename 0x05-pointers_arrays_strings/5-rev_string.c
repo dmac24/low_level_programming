@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * rev_strig - print a string in reverse
- *
+ * rev_string - print a string in reverse
+ * Description -  Reverse de String and print
  * @s: string
  *
  * Return: void
@@ -10,15 +10,24 @@
 
 void rev_string(char *s)
 {
-int c = 0;
+int i, j, l;
+char tmp;
 
-while (*(s + c))
-c++;
-c = c - 1;
-while (c >= 0)
+i = 0;
+j = 0;
+
+while (s[i] != '\0')
 {
-_putchar(*(s + c));
-c--;
+i++;
 }
-_putchar('\n');
+l = i / 2;
+i = i - 1;
+while (i >= l)
+{
+tmp  = s[j];
+s[j] = s[i];
+s[i] = tmp;
+i--;
+j++;
+}
 }
