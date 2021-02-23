@@ -1,25 +1,24 @@
 #include "holberton.h"
 
 /**
- * _strncat - add src to the dest string
+ * _memcpy - function that copies memory area.
  *
- * @dest: string add to src
- * @src: string add to dest
+ * @dest: copy of memoria area.
+ * @src: memory area.
  * @n: numbers of bytes
  *
  * Return: dest.
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 
 {
 int i = 0;
-int j = 0;
-while (dest[i] != '\0')
-i++;
-while (src[j] != '\0' && j != n)
+
+while (n > 0)
 {
-dest[i++] = src[j++];
+src[i] = dest[i];
+i++;
 }
 return (dest);
 }
