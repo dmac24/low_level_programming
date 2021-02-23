@@ -1,20 +1,24 @@
 #include "holberton.h"
 
 /**
- * _strlen - return the lenght of a string
+ * _strchr - function that locates a character in a string.
  *
  * @s: string
+ * @c: Character
  *
  * Return: legth of s
  */
 
-int _strlen(char *s)
+char *_strchr(char *s, char c)
 {
 
-int l = 0;
+int i = 0;
 
-while (*s++)
-l++;
-
-return (l);
+while (s[i] != '\0')
+{
+if (s[i] == c)
+return (s + i);
+i++;
+}
+return ('\0');
 }
