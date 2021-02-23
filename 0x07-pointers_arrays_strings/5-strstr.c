@@ -1,33 +1,33 @@
 #include "holberton.h"
 
 /**
- * rev_string - print a string in reverse
- * Description -  Reverse de String and print
- * @s: string
+ * _strstr - function that locates a substring
  *
- * Return: void
+ * @haystack: String to search
+ * @needle: Substring to search for
+ *
+ * Return: A pointer to the beginning of the located substring, or NULL 
+ * if the substring is not found.
  */
 
-void rev_string(char *s)
+char *_strstr(char *haystack, char *needle)
 {
-int i, j, l;
-char tmp;
+char *start;
+char *search;
 
-i = 0;
-j = 0;
-
-while (s[i] != '\0')
+while (*haystack != '\0')
 {
-i++;
-}
-l = i / 2;
-i = i - 1;
-while (i >= l)
+start = haystack;
+search = needle;
+while (*search == *haystack && *haystack != 0
+&& *search != 0)
 {
-tmp  = s[j];
-s[j] = s[i];
-s[i] = tmp;
-i--;
-j++;
+haystack++;
+search++;
 }
+if (*search == 0)
+return (start);
+haystack = start + 1;
+}
+return (0);
 }
