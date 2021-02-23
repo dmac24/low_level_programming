@@ -1,24 +1,30 @@
 #include "holberton.h"
 
 /**
- * print_rev - print a string in reverse
+ * _strpbrk - searches a string for any of a set of bytes.
  *
  * @s: string
+ * @accept: bytes in the string
  *
- * Return: void
+ * Return: a pointer to the byte in s.
  */
 
-void print_rev(char *s)
+char *_strpbrk(char *s, char *accept)
 {
-int c = 0;
+int i = 0;
+int j = 0;
 
-while (*(s + c))
-c++;
-c = c - 1;
-while (c >= 0)
+while (s[i] != '\0')
 {
-_putchar(*(s + c));
-c--;
+j = 0;
+while (accept[j] != '\0')
+{
+if (s[i] == accept[j])
+return (s + i);
+j++;
 }
-_putchar('\n');
+i++;
+}
+
+return ('\0');
 }
