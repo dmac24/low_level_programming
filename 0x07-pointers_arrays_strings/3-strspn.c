@@ -1,14 +1,15 @@
 #include "holberton.h"
 
 /**
- * _puts - print a string to stdout
+ * _strspn - gets the length of a prefix substring
  *
- * @str: string
+ * @s:
+ * @accept:
  *
- * Return: void
+ * Return: Numbers of bytes in initial segment of s.
  */
 
-void _puts(char *str)
+unsigned int _strspn(char *s, char *accept)
 {
 while (*str)
 _putchar(*str++);
