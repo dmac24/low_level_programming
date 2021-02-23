@@ -6,7 +6,7 @@
  * @haystack: String to search
  * @needle: Substring to search for
  *
- * Return: A pointer to the beginning of the located substring, or NULL 
+ * Return: A pointer to the beginning of the located substring, or NULL
  * if the substring is not found.
  */
 
