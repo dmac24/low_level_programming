@@ -1,30 +1,23 @@
 #include "holberton.h"
 
 /**
- * puts2 - print some characters
+ * print_chessboard - function that prints the chessboard
  *
- * @str: string
+ * @a: chessboard value
  *
  * Return: void
  */
 
-void puts2(char *str)
+void print_chessboard(char (*a)[8])
 {
 int i, j;
 
-i = 0;
-j = 0;
-while (str[i] != '\0')
+for (i = 0; i < 8; i++)
 {
-i++;
-}
-while (j < i)
+for (j = 0; j < 8; j++)
 {
-if (j % 2 == 0)
-{
-_putchar(str[j]);
-}
-j++;
+_putchar(a[i][j]);
 }
 _putchar('\n');
+}
 }
