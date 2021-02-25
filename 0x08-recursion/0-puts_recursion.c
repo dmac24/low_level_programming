@@ -1,26 +1,22 @@
 #include "holberton.h"
 
 /**
- * _memset - function that fills memory with a constant byte.
+ * _puts_recursion - function that prints a string + new line.
  *
- * @s: Area pointed.
- * @n: Numbers of bytes for fill.
- * @b: Constant byte.
- *
- * Return: Returns a pointer to the memory area s.
+ * @s: String.
+ * 
+ * Return: Void.
  */
 
-char *_memset(char *s, char b, unsigned int n)
+void _puts_recursion(char *s)
 
 {
 int i = 0;
 
-while (n > 0)
+if (s[i] != '\0')
+
 {
-s[i] = b;
 i++;
-n--;
 }
 
-return (s);
 }
