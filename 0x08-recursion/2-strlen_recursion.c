@@ -1,24 +1,16 @@
 #include "holberton.h"
 
 /**
- * _strchr - function that locates a character in a string.
+ * _strlen_recursion - Recursion that returns the lenght of a string.
  *
- * @s: string
- * @c: Character
+ * @s: String.
  *
- * Return: Legth Of S
+ * Return: Length of a string.
  */
 
-char *_strchr(char *s, char c)
-{
+int _strlen_recursion(char *s)
 
-int i = 0;
-
-while (s[i] != '\0')
 {
-if (s[i] == c)
-return (s + i);
-i++;
-}
-return (0);
+if (*s != '\0')
+return (1 + _strlen_recursion(s + 1));
 }
