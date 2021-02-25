@@ -1,24 +1,20 @@
 #include "holberton.h"
 
 /**
- * _memcpy - function that copies memory area.
+ * _print_rev_recursion - Recursion that prints a string in reverse.
  *
- * @dest: copy of memoria area.
- * @src: memory area.
- * @n: numbers of bytes
+ * @s: String.
  *
- * Return: dest.
+ * Return: Void.
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+void _print_rev_recursion(char *s)
 
 {
-int i = 0;
 
-while (i < (int)n)
+if (*s != '\0')
 {
-dest[i] = src[i];
-i++;
+_print_rev_recursion(s + 1);
+_putchar(*s);
 }
-return (dest);
 }
