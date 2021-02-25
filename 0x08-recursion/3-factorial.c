@@ -1,27 +1,29 @@
 #include "holberton.h"
 
 /**
- * _strspn - gets the length of a prefix substring
+ * factorial - Recursion that returns the factorial of a given number.
  *
- * @s: String to check.
- * @accept: Substring to check.
+ * @n: Number.
  *
- * Return: Numbers of bytes in initial segment of s.
+ * Return: Factorial of n, return -1 if n is lower than 0.
  */
 
-unsigned int _strspn(char *s, char *accept)
-{
-unsigned int i, j;
+int factorial(int n)
 
-for (i = 0; s[i]; i++)
 {
-for (j = 0; accept[j]; j++)
+int i = n;
+
+if (n < 0)
 {
-if (s[i] == accept[j])
-break;
+return (-1);
 }
-if (!accept[j])
-break;
+if (n == 0 || n == 1)
+{
+return (1);
 }
+else
+{
+i *= factorial(n - 1);
 return (i);
+}
 }
