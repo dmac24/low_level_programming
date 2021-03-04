@@ -1,33 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - Read the last digit
- *
+ * main - possible combinations of two digits.
  * Return: Always 0.
  */
 
 int main(void)
 {
-int c = 48;
-int d = 49;
+int i, j;
 
-while ((c <= 56) && (c != d))
+for (i = 0; i <= 98; i++)
 {
-putchar(c);
-putchar(d);
-if ((c == 56) && (d == 57))
+for (j = i + 1; j <= 99; j++)
 {
+putchar((i / 10) + '0');
+putchar((i % 10) + '0');
+putchar(' ');
+putchar((j / 10) + '0');
+putchar((j % 10) + '0');
+
+if (i == 98 && j == 99)
+continue;
+putchar(',');
+putchar(' ');
+}
+}
 putchar('\n');
-c++;
-d++;
-}
-else
-{
-putchar(44);
-putchar(32);
-}
-}
+
 return (0);
 }
