@@ -1,23 +1,16 @@
 #include "holberton.h"
 
 /**
- * main - print Holberton
- *
- * Return: Always 0.
+ * main - tests function that prints if integer is positive or negative
+ * Return: 0
  */
 
 int main(void)
 {
-_putchar('H');
-_putchar('o');
-_putchar('l');
-_putchar('b');
-_putchar('e');
-_putchar('r');
-_putchar('t');
-_putchar('o');
-_putchar('n');
-_putchar('\n');
+int i;
+
+i = 0;
+positive_or_negative(i);
 
 return (0);
 }
