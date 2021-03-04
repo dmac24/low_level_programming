@@ -3,30 +3,39 @@
 #include <time.h>
 
 /**
- * main - Read the last digit
+ * main - Print diferrent conbination of two digits
  *
  * Return: Always 0.
  */
 
 int main(void)
 {
-int c = 48;
-int d = 49;
+int i = 48;
+int j = 49;
 
-while ((c <= 56) && (c != d))
+while  ((i < 57) && (j < 58))
 {
-putchar(c);
-putchar(d);
-if ((c == 56) && (d == 57))
+putchar(i);
+putchar(j);
+if ((i == 56) && (j == 57))
 {
 putchar('\n');
-c++;
-d++;
+i++;
+j++;
 }
 else
 {
-putchar(44);
-putchar(32);
+putchar(',');
+putchar(' ');
+if (j < 57)
+{
+j++;
+}
+else
+{
+i++;
+j = 1 + i;
+}
 }
 }
 return (0);
