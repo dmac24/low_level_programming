@@ -1,22 +1,29 @@
 #include "holberton.h"
 
 /**
- * print alphabet - print alphabet x10
- *
- * Return: Always 0.
+ * largest_number - returns the largest of 3 numbers
+ * @a: first integer
+ * @b: second integer
+ * @c: third integer
+ * Return: largest number
  */
 
-void print_alphabet_x10(void)
+int largest_number(int a, int b, int c)
 {
-int n = '0';
-int c = 'a';
-while (n < 10)
+int largest;
+
+if (a > b && a > c)
 {
-while (c <= 'z')
-{
-_putchar(c++);
+largest = a;
 }
-n++;
-_putchar('\n');
+else if (b > a && b > c)
+{
+largest = b;
 }
+else
+{
+largest = c;
+}
+
+return (largest);
 }
