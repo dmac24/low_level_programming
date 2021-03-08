@@ -6,19 +6,19 @@
  * @s: string
  * @c: Character
  *
- * Return: legth of s
+ * Return: Legth Of S
  */
 
 char *_strchr(char *s, char c)
 {
+int i;
 
-int i = 0;
-
-while (s[i] != '\0')
+for (i = 0; s[i]; i++)
 {
 if (s[i] == c)
 return (s + i);
-i++;
 }
+if (s[i] == c)
+return (s + i);
 return (0);
 }
