@@ -1,23 +1,34 @@
 #include "holberton.h"
 
 /**
- * print_chessboard - function that prints the chessboard
+ * prime_number_2 - find prime numbers.
  *
- * @a: chessboard value
+ * @n: number
+ * @i: number (test)
  *
- * Return: void
+ * Return: 1 if n is a prime number, otherwise return 0.
  */
 
-void print_chessboard(char (*a)[8])
+int prime_number_2(int n, int i)
 {
-int i, j;
+if (i > (n / 2))
+return (1);
+else if (n % i == 0)
+return (0);
+return (prime_number_2(n, i + 1));
+}
 
-for (i = 0; i < 8; i++)
+/**
+ * is_prime_number - find if a number is prime
+ *
+ * @n: number
+ *
+ * Return: prime_number_2 if n>1, 0 if n is not prime number.
+ */
+
+int is_prime_number(int n)
 {
-for (j = 0; j < 8; j++)
-{
-_putchar(a[i][j]);
-}
-_putchar('\n');
-}
+if (n <= 1)
+return (0);
+return (prime_number_2(n, 2));
 }

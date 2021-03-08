@@ -1,26 +1,60 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * print_array -  print n elements of an array
- *
- * @a: array
- * @n: number array values of print
- *
- * Return: void
+ * _strlen_recursion - Finds the length of a string.
+ * @s: string.
+ * Return: length of s.
  */
 
-void print_array(int *a, int n)
-
+int _strlen_recursion(char *s)
 {
-int i = 0;
-
-while (i < n)
+if (*s == '\0')
 {
-printf("%d", a[i]);
-if (i < (n - 1))
-printf(", ");
-i++;
+return (0);
 }
-printf("\n");
+else
+{
+return (1 + _strlen_recursion(s + 1));
+}
+}
+
+/**
+ * isPalindromeRecursive - finds if strings are palindromes.
+ *
+ * @string: String.
+ * @length: counter.
+ *
+ * Return: 1 if null is in the end or 0 if not.
+ */
+
+int isPalindromeRecursive(char *string, int length)
+{
+if (string[0] != string[length])
+{
+return (0);
+}
+else if (string[0] == '\0')
+{
+return (1);
+}
+else
+{
+return (isPalindromeRecursive(string + 1, length - 2));
+}
+}
+
+/**
+ * is_palindrome - Function that finds palindromes.
+ *
+ * @s: String to be used.
+ *
+ * Return: 1 if string is palindrome and 0 if not.
+ */
+
+int is_palindrome(char *s)
+{
+
+int length = _strlen_recursion(s);
+
+return (isPalindromeRecursive(s, length - 1));
 }

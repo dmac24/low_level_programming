@@ -1,30 +1,27 @@
 #include "holberton.h"
 
 /**
- * _strpbrk - searches a string for any of a set of bytes.
+ * _pow_recursion - function that returns the value of x raised to the
+ * power of yfunction that returns the value of x raised to the power
+ * of y.
  *
- * @s: string
- * @accept: bytes in the string
+ * @y: Power
+ * @x: Base
  *
- * Return: a pointer to the byte in s.
+ * Return: If y is lower than 0, the function should return -1.
  */
 
-char *_strpbrk(char *s, char *accept)
-{
-int i = 0;
-int j = 0;
+int _pow_recursion(int x, int y)
 
-while (s[i] != '\0')
 {
-j = 0;
-while (accept[j] != '\0')
-{
-if (s[i] == accept[j])
-return (s + i);
-j++;
-}
-i++;
-}
 
-return ('\0');
+if (y < 0)
+{
+return (-1);
+}
+if (y == 0)
+{
+return (1);
+}
+return (x * _pow_recursion(x, y - 1));
 }

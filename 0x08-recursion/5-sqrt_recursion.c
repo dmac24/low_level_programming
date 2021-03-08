@@ -1,33 +1,36 @@
 #include "holberton.h"
 
 /**
- * _strstr - function that locates a substring
+ * sqrt_sqrt - checks for the square root of c.
  *
- * @haystack: String to search
- * @needle: Substring to search for
+ * @i: sqrt
+ * @c: number
  *
- * Return: A pointer to the beginning of the located substring, or NULL
- * if the substring is not found.
+ * Return: sqrt and -1 if c doesn't have squirt
  */
 
-char *_strstr(char *haystack, char *needle)
+int sqrt_sqrt(int i, int c)
 {
-char *start;
-char *search;
+if (c == i * i)
+return (i);
+if (c < i * i)
+return (-1);
+return (sqrt_sqrt(i + 1, c));
+}
 
-while (*haystack != '\0')
+/**
+ * _sqrt_recursion - function that returns the natural square
+ * root of a number.
+ *
+ * @n: number
+ *
+ * Return: Return n, If n does not have a natural square root,
+ * the function should return -1
+ */
+
+int _sqrt_recursion(int n)
 {
-start = haystack;
-search = needle;
-while (*search == *haystack && *haystack != 0
-&& *search != 0)
-{
-haystack++;
-search++;
-}
-if (*search == 0)
-return (start);
-haystack = start + 1;
-}
+if (n == 0)
 return (0);
+return (sqrt_sqrt(1, n));
 }
