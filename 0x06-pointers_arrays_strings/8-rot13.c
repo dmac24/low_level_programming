@@ -23,6 +23,7 @@ for (j = 0; j < 52; j++)
 if (s[i] == original[j])
 {
 s[i] = change[j];
+break;
 }
 }
 }
