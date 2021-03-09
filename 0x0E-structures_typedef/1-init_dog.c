@@ -1,20 +1,23 @@
-#include "holberton.h"
+#include "dog.h"
 
 /**
- * _print_rev_recursion - Recursion that prints a string in reverse.
+ * init_dog - Function that initialize a variable struct dog.
  *
- * @s: String.
+ * @d: structure
+ * @name: name
+ * @age: age
+ * @owner: owner
  *
  * Return: Void.
  */
 
-void _print_rev_recursion(char *s)
-
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 
-if (*s != '\0')
+if (d != '\0')
 {
-_print_rev_recursion(s + 1);
-_putchar(*s);
+d->name = name;
+d->age = age;
+d->owner = owner;
 }
 }
