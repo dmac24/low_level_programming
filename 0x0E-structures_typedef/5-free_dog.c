@@ -1,36 +1,18 @@
-#include "holberton.h"
+#include "dog.h"
+#include <stdlib.h>
 
 /**
- * sqrt_sqrt - checks for the square root of c.
+ * free_dog - function that frees dogs
+ * @d: pointer to dog.
  *
- * @i: sqrt
- * @c: number
- *
- * Return: sqrt and -1 if c doesn't have squirt
+ * Return: void
  */
-
-int sqrt_sqrt(int i, int c)
+void free_dog(dog_t *d)
 {
-if (c == i * i)
-return (i);
-if (c < i * i)
-return (-1);
-return (sqrt_sqrt(i + 1, c));
+if (d)
+{
+free(d->name);
+free(d->owner);
+free(d);
 }
-
-/**
- * _sqrt_recursion - function that returns the natural square
- * root of a number.
- *
- * @n: number
- *
- * Return: Return n, If n does not have a natural square root,
- * the function should return -1
- */
-
-int _sqrt_recursion(int n)
-{
-if (n == 0)
-return (0);
-return (sqrt_sqrt(1, n));
 }

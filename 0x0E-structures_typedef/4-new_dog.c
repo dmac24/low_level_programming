@@ -1,27 +1,22 @@
-#include "holberton.h"
+#include <stdlib.h>
+#include "dog.h"
 
 /**
- * _pow_recursion - function that returns the value of x raised to the
- * power of yfunction that returns the value of x raised to the power
- * of y.
+ * new_dog - creates a new dog
+ * @name: Dog's name
+ * @age: Dog's age
+ * @owner: Dog's owner
  *
- * @y: Power
- * @x: Base
- *
- * Return: If y is lower than 0, the function should return -1.
+ * Return: pointer to new dog
  */
 
-int _pow_recursion(int x, int y)
+dog_t *new_dog(char *name, float age, char *owner)
 
 {
-
-if (y < 0)
+if (d != '\0')
 {
-return (-1);
+d->name = name;
+d->age = age;
+d->owner = owner;
 }
-if (y == 0)
-{
-return (1);
-}
-return (x * _pow_recursion(x, y - 1));
 }
