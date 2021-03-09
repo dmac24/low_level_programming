@@ -1,22 +1,37 @@
-#include "holberton.h"
+B#include "dog.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * _strlen_recursion - Recursion that returns the lenght of a string.
+ * print_dog - Function that prints a struct dog.
  *
- * @s: String.
+ * @d: structure.
  *
- * Return: Length of a string.
+ * Return: Void.
  */
 
-int _strlen_recursion(char *s)
+void print_dog(struct dog *d)
+{
 
+if (d != NULL)
 {
-if (*s != '\0')
-{
-return (1 + _strlen_recursion(s + 1));
+
+if (d->name != NULL)
+printf("Name: %s\n", d->name);
+else
+printf("Name: (nil)\n");
+
+if (d->age != 0)
+printf("Age: %f\n", d->age);
+else
+printf("Age: (nil)\n");
+
+if (d->owner != NULL)
+printf("Owner: %s\n", d->owner);
+else
+printf("Owner: (nil)\n");
+
 }
 else
-{
-return (0);
-}
+return;
 }
