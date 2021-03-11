@@ -1,27 +1,77 @@
-#include "holberton.h"
+#include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * _strspn - gets the length of a prefix substring
+ * op_add - adds a to b
  *
- * @s: String to check.
- * @accept: Substring to check.
+ * @a: 1st number
+ * @b: 2nd number
  *
- * Return: Numbers of bytes in initial segment of s.
+ * Return: result
  */
 
-unsigned int _strspn(char *s, char *accept)
+int op_add(int a, int b)
 {
-unsigned int i, j;
+return (a + b);
+}
 
-for (i = 0; s[i]; i++)
+
+/**
+ * op_sub - subtracts a - b
+ *
+ * @a: 1st number
+ * @b: 2nd number
+ *
+ * Return: result
+ */
+
+int op_sub(int a, int b)
 {
-for (j = 0; accept[j]; j++)
+return (a - b);
+}
+
+
+/**
+ * op_mul - multiplies a * b
+ *
+ * @a: 1st number
+ * @b: 2nd number
+ *
+ * Return: result
+ */
+
+int op_mul(int a, int b)
 {
-if (s[i] == accept[j])
-break;
+return (a * b);
 }
-if (!accept[j])
-break;
+
+
+/**
+ * op_div - divides a / b
+ *
+ * @a: 1st number
+ * @b: 2nd number
+ *
+ * Return: result
+ */
+
+int op_div(int a, int b)
+{
+return (a / b);
 }
-return (i);
+
+
+/**
+ * op_mod - remainder of a / b
+ *
+ * @a: 1st number
+ * @b: 2nd number
+ *
+ * Return: result
+ */
+
+int op_mod(int a, int b)
+{
+return (a % b);
 }

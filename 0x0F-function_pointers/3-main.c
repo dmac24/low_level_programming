@@ -1,27 +1,13 @@
-#include "holberton.h"
+#include <stdio.h>
+#include "3-calc.h"
 
 /**
- * _strspn - gets the length of a prefix substring
+ * is_98 - check if a number is equal to 98
+ * @elem: the integer to check
  *
- * @s: String to check.
- * @accept: Substring to check.
- *
- * Return: Numbers of bytes in initial segment of s.
+ * Return: 0 if false, something else otherwise.
  */
-
-unsigned int _strspn(char *s, char *accept)
+int is_98(int elem)
 {
-unsigned int i, j;
-
-for (i = 0; s[i]; i++)
-{
-for (j = 0; accept[j]; j++)
-{
-if (s[i] == accept[j])
-break;
-}
-if (!accept[j])
-break;
-}
-return (i);
+  return (98 == elem);
 }

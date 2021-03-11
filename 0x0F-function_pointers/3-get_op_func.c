@@ -1,27 +1,38 @@
-#include "holberton.h"
+#include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * _strspn - gets the length of a prefix substring
+ * get_op_func - function that selects the correct operation 
  *
- * @s: String to check.
- * @accept: Substring to check.
+ * @s: is the operator passed as argument to the program
  *
- * Return: Numbers of bytes in initial segment of s.
+ * Return: pointer to the function that corresponds to the operator given as a parameter.
  */
 
-unsigned int _strspn(char *s, char *accept)
-{
-unsigned int i, j;
+int (*get_op_func(char *s))(int, int)
 
-for (i = 0; s[i]; i++)
 {
-for (j = 0; accept[j]; j++)
+
+op_t ops[] = {
+  {"+", op_add},
+  {"-", op_sub},
+  {"*", op_mul},
+  {"/", op_div},
+  {"%", op_mod},
+  {NULL, NULL}
+};
+int i;
+
+i = 0;
+
+while (ops[i].op != NULL)
 {
-if (s[i] == accept[j])
-break;
+if (*(ops[i].op) == *s)
+return (ops[i].f);
+
+i++;
 }
-if (!accept[j])
-break;
-}
-return (i);
+
+return (NULL);
 }
