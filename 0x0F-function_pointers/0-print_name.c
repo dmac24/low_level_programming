@@ -1,26 +1,19 @@
-#include "holberton.h"
+#include "function_pointers.h"
+#include <stdlib.h>
+
 
 /**
- * _memset - function that fills memory with a constant byte.
+ * print_name - prints a name give a function
  *
- * @s: Area pointed.
- * @n: Numbers of bytes for fill.
- * @b: Constant byte.
+ * @name: name to print
+ * @f: function to print
  *
- * Return: Returns a pointer to the memory area s.
+ * Return: void
  */
 
-char *_memset(char *s, char b, unsigned int n)
+void print_name(char *name, void (*f)(char *))
 
 {
-int i = 0;
-
-while (n > 0)
-{
-s[i] = b;
-i++;
-n--;
-}
-
-return (s);
+if (name != NULL && f != NULL)
+f(name);
 }
