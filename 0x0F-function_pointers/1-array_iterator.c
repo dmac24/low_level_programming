@@ -1,24 +1,26 @@
-#include "holberton.h"
+#include "function_pointers.h"
+#include <stdlib.h>
 
 /**
- * _memcpy - function that copies memory area.
+ * array_iterator -  function given as a parameter on each element of an array.
  *
- * @dest: copy of memoria area.
- * @src: memory area.
- * @n: numbers of bytes
+ * @array: Array to Iterate.
+ * @size: Size.
+ * @action: Function to call on array.
  *
- * Return: dest.
+ * Return: Void
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+void array_iterator(int *array, size_t size, void (*action)(int))
 
 {
-int i = 0;
 
-while (i < (int)n)
+unsigned int i;
+
+if (array != NULL && action != NULL && size > 0)
+
 {
-dest[i] = src[i];
-i++;
+for (i = 0; i < size; i++)
+action(array[i]);
 }
-return (dest);
 }
