@@ -1,13 +1,17 @@
+B#include "3-calc.h"
+#include <stdlib.h>
 #include <stdio.h>
-#include "3-calc.h"
 
 /**
- * is_98 - check if a number is equal to 98
- * @elem: the integer to check
+ * main - main
+ * @argc: argc.
+ * @argv: argv.
  *
- * Return: 0 if false, something else otherwise.
+ * Return: some
  */
-int is_98(int elem)
+
+int main(int argc, char *argv[])
 {
-  return (98 == elem);
+argc = *argv;
+return (0);
 }
