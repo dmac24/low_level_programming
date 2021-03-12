@@ -17,7 +17,7 @@ int (*f)(int, int);
 int num;
 int a, b;
 
-if (argc != 4)
+if (argc != 4 || argv[2][1] != 0)
 {
 printf("Error\n");
 exit(98);
