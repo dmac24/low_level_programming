@@ -24,12 +24,19 @@ va_start(pstring, n);
 for (i = 0; i < n; i++)
 {
 string = va_arg(pstring, char *);
-if (string)
-pintf("%s", string);
+
+if (separator != NULL && i != n - 1)
+{
+if (string != NULL)
+printf("%s%s", string, separator);
+else
+printf("(nil)%s", separator);
+}
+else
+if (string != NULL)
+printf("%s", string);
 else
 printf("(nil)");
-if (i < n - 1 && separator)
-printf("%s", separator);
 }
 printf("\n");
 va_end(pstring);
