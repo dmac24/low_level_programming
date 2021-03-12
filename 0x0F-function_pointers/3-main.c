@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
 {
 
 int (*f)(int, int);
-int a, b, c;
+int num;
+int a, b;
 
 if (argc != 4)
 {
@@ -40,7 +41,7 @@ printf("Error\n");
 exit(100);
 }
 
-c = f(a, b);
-printf("%d\n", c);
+num = f(a, b);
+printf("%d\n", num);
 return (0);
 }
