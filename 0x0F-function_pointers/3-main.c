@@ -7,14 +7,14 @@
  * @argc: argc.
  * @argv: argv.
  *
- * Return: some
+ * Return: 0.
  */
 
 int main(int argc, char *argv[])
 {
+
 int (*f)(int, int);
-int num;
-int a, b;
+int a, b, c;
 
 if (argc != 4)
 {
@@ -25,9 +25,12 @@ exit(98);
 a = atoi(argv[1]);
 b = atoi(argv[3]);
 f = get_op_func(argv[2]);
+c = f(a, b);
 
 if (f == NULL)
+
 {
+
 printf("Error\n");
 exit(99);
 }
@@ -38,8 +41,6 @@ printf("Error\n");
 exit(100);
 }
 
-num = f(a, b);
-printf("%d\n", num);
-
+printf("%d\n", c);
 return (0);
 }
