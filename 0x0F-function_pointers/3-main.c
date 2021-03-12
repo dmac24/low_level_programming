@@ -25,10 +25,9 @@ exit(98);
 a = atoi(argv[1]);
 b = atoi(argv[3]);
 f = get_op_func(argv[2]);
-c = f(a, b);
+
 
 if (f == NULL)
-
 {
 
 printf("Error\n");
@@ -41,6 +40,7 @@ printf("Error\n");
 exit(100);
 }
 
+c = f(a, b);
 printf("%d\n", c);
 return (0);
 }
