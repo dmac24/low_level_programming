@@ -1,5 +1,7 @@
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
-#include "dog.h"
+#include "lists.h"
 
 /**
  * main - check the code for Holberton School students.
@@ -8,9 +10,25 @@
  */
 int main(void)
 {
-  struct dog my_dog;
+  list_t *head;
+  list_t *new;
+  list_t hello = {"World", 5, NULL};
+  size_t n;
 
-  init_dog(&my_dog, "Django", 3.5, "Bob");
-  printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
+  head = &hello;
+  new = malloc(sizeof(list_t));
+  if (new == NULL)
+    {
+      printf("Error\n");
+      return (1);
+    }
+  new->str = strdup("Hello");
+  new->len = 5;
+  new->next = head;
+  head = new;
+  n = list_len(head);
+  printf("-> %lu elements\n", n);
+  free(new->str);
+  free(new);
   return (0);
 }
