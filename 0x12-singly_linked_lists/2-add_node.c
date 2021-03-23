@@ -27,7 +27,8 @@ return (NULL);
 
 new->str = strdup(str);
 
-for (i = 0; str[i] != '\0'; i++);
+for (i = 0; str[i] != '\0'; i++)
+;
 
 new->len = i;
 new->next = *head;
