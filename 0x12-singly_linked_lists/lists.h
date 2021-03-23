@@ -1,31 +1,23 @@
-#ifndef _DOG_H_
-#define _DOG_H_
+#ifndef _LISTS_H_
+#define _LISTS_H_
 
 /**
- * struct dog - information about dogs
- * @name: Dog's name.
- * @age: Dog's age.
- * @owner: Dog's owner.
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
  *
- * Description: Define a new type struct dog with some elements.
+ * Description: singly linked list node structure
+ * for Holberton project
  */
 
-struct dog
+typedef struct list_s
 {
-char *name;
-float age;
-char *owner;
-};
+  char *str;
+  unsigned int len;
+  struct list_s *next;
+} list_t;
 
-/**
- * dog_t - Typedef for struct dog
- */
-
-typedef struct dog dog_t;
-
-dog_t *new_dog(char *name, float age, char *owner);
-void free_dog(dog_t *d);
-void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
+size_t print_list(const list_t *h);
 
 #endif
