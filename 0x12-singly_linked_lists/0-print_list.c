@@ -17,18 +17,18 @@ size_t nodes = 0;
 
 tmp = h;
 
- while (tmp)
-   {
-   if (tmp->str == NULL)
-     printf("[0] (nil)\n");
+while (tmp)
+{
 
-   else
-     printf("[%d] %s\n", tmp->len, tmp->str);
+if (tmp->str == NULL)
+printf("[0] (nil)\n");
 
- nodes++;
- tmp = tmp->next;
+else
+printf("[%d] %s\n", tmp->len, tmp->str);
+
+nodes++;
+tmp = tmp->next;
 }
 
 return (nodes);
-
 }
