@@ -1,34 +1,55 @@
-#include <stdlib.h>
+#include "holberton.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 #include <stdio.h>
-#include "lists.h"
+#include <stdlib.h>
 
 /**
- * print_list - prints all the elements of a list_t list
- * @h: point start of the list
+ * read_textfile - function reads a text file and prints it to the POSIX standard output.
  *
- * Return: number of nodes in the list
+ * @filename: file.
+ * @letters: number of letters it should read and print.
+ *
+ * Return: Number of letters read and printed; 0 if write fail or filename is null.
  */
 
-size_t print_list(const list_t *h)
+ssize_t read_textfile(const char *filename, size_t letters)
+
 {
+  int fd;
+  ssize_t nread, nwrite;
+  char *buffer;
 
-const list_t *tmp;
-size_t nodes = 0;
+  if (filename == NULL)
+    return (0);
 
-tmp = h;
+  buffer = malloc(letters * sizeof(char) + 1);
+ 
+ if (!buffer)
+    return (0);
+  
+fd = open(filename, O_RDONLY);
+  if (fd == -1)
+    {
+      free(buffer);
+      return (0);
+    }
+ 
+ nread = read(fd, buffer, letters);
+  
+if (nread == -1)
+    {
+      free(buffer);
+      return (0);
+    }
 
-while (tmp)
-{
+  nwrite = write(STDOUT_FILENO, buffer, nread);
+  close(fd);
+  free(buffer);
 
-if (tmp->str == NULL)
-printf("[0] (nil)\n");
-
-else
-printf("[%d] %s\n", tmp->len, tmp->str);
-
-nodes++;
-tmp = tmp->next;
-}
-
-return (nodes);
-}
+  if (nread == nwrite)
+    return (nwrite);
+  return (0);
+ }
