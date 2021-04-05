@@ -38,7 +38,6 @@ fd = open(filename, O_RDONLY);
     }
  
  nread = read(fd, buffer, letters);
-  
 if (nread == -1)
     {
       free(buffer);
