@@ -1,30 +1,41 @@
-#include <stdlib.h>
+#include "holberton.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 #include <stdio.h>
-#include "lists.h"
+#include <stdlib.h>
 
 /**
- * list_len - number of elements in a linked.
+ * create_file - function that create a file.
  *
- * @h: list.
+ * @filename: File.
+ * @text_content: String to write to the file.
  *
- * Return: number of elements in h.
+ * Return: 1 on success, -1 on failure.
  */
 
-size_t list_len(const list_t *h)
+
+int create_file(const char *filename, char *text_content)
+
 {
+  int fd, nwrite;
+  int i = 0;
 
-const list_t *tmp;
-size_t nodes = 0;
+  if (filename == NULL)
+    return (-1);
 
-tmp = h;
+  if (text_content == NULL)
+    text_content = "";
+  fd = open(filename, O_RDWR | O_TRUNC | O_CREAT, 0600);
 
-while (tmp != NULL)
-{
+  if (fd == -1)
+    return (-1);
 
-tmp = tmp->next;
-nodes++;
-
-}
-
-return (nodes);
+  while (text_content[i] != '\0')
+    i++;
+  nwrite = write(fd, text_content, i);
+  if (nwrite == -1)
+    return (-1);
+  return (1);
 }
