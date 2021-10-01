@@ -2,9 +2,9 @@
 #include <unistd.h>
 
 /**
- * main - Prints a Sentence
+ * main - Print a Sentence
  *
- * Return: Always 0.
+ * Return: 1.
  */
 
 int main(void)
