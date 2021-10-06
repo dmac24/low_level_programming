@@ -1,10 +1,10 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _islower - print return
  *
  * @c: variable
  *
- * Return: 1 and 0.
+ * Return: 1 if c is lowercase, otherwise return 0.
  */
 int  _islower(int c)
 {
