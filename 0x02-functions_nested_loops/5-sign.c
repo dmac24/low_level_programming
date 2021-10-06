@@ -1,12 +1,14 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_sign - check
+ * print_sign - print sign of number
  *
- * @n: int parameter to check
+ * @n: parameter to check
  *
- * Return: 1, 0, -1
+ * Return: 1 if n is greater than zero. 0 if n is zero. 
+ * and return -1 if n is less than zero.
  */
+
 int print_sign(int n)
 {
 if (n > 0)
