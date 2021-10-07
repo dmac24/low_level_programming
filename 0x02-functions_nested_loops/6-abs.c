@@ -1,14 +1,16 @@
+#include "main.h"
+ 
 /**
  * _abs - absolute value
  *
- * @n: integer parameter
+ * @r: integer parameter
  *
- * Return: value of n
+ * Return: value of r
  */
-int _abs(int n)
+int _abs(int r)
 {
-if (n < 0)
-return (-(n));
+if (r < 0)
+return (-(r));
 else
-return (n);
+return (r);
 }
