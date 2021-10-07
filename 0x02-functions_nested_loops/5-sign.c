@@ -5,7 +5,7 @@
  *
  * @n: parameter to check
  *
- * Return: 1 if n is greater than zero. 0 if n is zero. 
+ * Return: 1 if n is greater than zero. 0 if n is zero.
  * and return -1 if n is less than zero.
  */
 
