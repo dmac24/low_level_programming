@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * add - 2 numbers
  *
