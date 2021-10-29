@@ -18,7 +18,7 @@ int i = 0;
 int j = 0;
 int k = 0;
 int l = 0;
-  
+
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
