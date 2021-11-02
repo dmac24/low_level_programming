@@ -2,11 +2,11 @@
 #include "dog.h"
 
 /**
- * _strdup - create a new array containing a copy of the given string
+ * _strdup - create a new array containing a copy
+ * of the given string
  * @str: a pointer to the string to copy
  *
- * Return: NULL if str is NULL or if memory allocation fails,
- * otherwise a return a pointer to the new copy
+ * Return: NULL or pointer to the copy.
  */
 char *_strdup(char *str)
 {
