@@ -8,6 +8,7 @@
  *
  * Return: NULL or pointer to the copy.
  */
+
 char *_strdup(char *str)
 {
 char *dup;
@@ -15,7 +16,7 @@ unsigned int size = 0;
 
 if (str)
 {
-while (str[size++]);
+while (str[size++])
 
 dup = malloc(sizeof(char) * size);
 if (dup)
