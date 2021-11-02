@@ -17,7 +17,7 @@ unsigned int size = 0;
 if (str)
 {
 while (str[size++])
-
+;
 dup = malloc(sizeof(char) * size);
 if (dup)
 {
