@@ -1,4 +1,4 @@
-Learning Objectives:
+Objectives:
 
 - Why C programming is awesome
 - Who invented C
